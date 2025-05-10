@@ -5,8 +5,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 
 def create_user():
-    # Set up the Chrome driver correctly
+    
     service = Service(ChromeDriverManager().install())
-    driver = webdriver.Chrome(service=service)  # Correct way
+    driver = webdriver.Chrome(service=service)
 
     return Actor.named("Sebas").who_can(BrowseTheWeb.using(driver))
