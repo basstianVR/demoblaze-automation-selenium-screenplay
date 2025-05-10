@@ -1,0 +1,5 @@
+screenpy==4.0.3
+screenpy-selenium==4.0.3
+selenium==4.20.0
+pytest==8.2.0
+webdriver-manager==4.0.1
