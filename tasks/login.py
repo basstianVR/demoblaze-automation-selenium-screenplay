@@ -1,7 +1,5 @@
 from screenpy import Actor
 from screenpy_selenium.actions import Open, Click, Enter, Wait
-from screenpy_selenium.questions import Text
-from selenium.webdriver.common.by import By
 from pages.login_page import LoginPage
 
 class LogIn:
@@ -16,5 +14,6 @@ class LogIn:
             Wait.for_the(LoginPage.USERNAME_INPUT).to_appear(),
             Enter.the_text(self.username).into(LoginPage.USERNAME_INPUT),
             Enter.the_text(self.password).into(LoginPage.PASSWORD_INPUT),
-            Click.on(By.XPATH,LoginPage.SUBMIT_LOGIN_BUTTON)
+            Click.on(LoginPage.SUBMIT_LOGIN_BUTTON),
+            Wait.for_the(LoginPage.WELCOME_FIELD).to_appear()
         )

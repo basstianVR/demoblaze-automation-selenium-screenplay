@@ -7,3 +7,5 @@ class LoginPage:
     USERNAME_INPUT = Target.the("username input").located_by((By.ID, "loginusername"))
     PASSWORD_INPUT = Target.the("password input").located_by((By.ID, "loginpassword"))
     SUBMIT_LOGIN_BUTTON = Target.the("submit login button").located_by((By.XPATH, "//button[text()='Log in']"))
+    WELCOME_FIELD = Target.the("submit login button").located_by((By.XPATH, "//a[@id='nameofuser']"))
+    WELCOME_MESSAGE = Target.the("welcome message").located((By.ID, "nameofuser"))
