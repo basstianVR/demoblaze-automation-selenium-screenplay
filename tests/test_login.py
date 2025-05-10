@@ -9,8 +9,11 @@ def test_user_can_log_in():
     Sebas = create_user()
     
     Sebas.attempts_to(
-        LogIn("Darkan", "pwd1234"),
-        See.the(Text.of(NavBar.WELCOME_MESSAGE), ContainsTheText("Welcome Darkan")) 
+        LogIn("Darkan", "pwd1234")
+    )
+
+    Sebas.should(
+        See.the(Text.of(NavBar.WELCOME_MESSAGE), ContainsTheText("Welcome Darkan"))
     )
     
 
