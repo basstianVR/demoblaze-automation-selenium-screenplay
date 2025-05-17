@@ -5,3 +5,4 @@ class NavBar:
     LOGIN_NAV_BUTTON = Target.the("login nav button").located_by((By.ID, "login2"))
     WELCOME_FIELD = Target.the("welcome field").located_by((By.XPATH, "//a[@id='nameofuser']"))
     WELCOME_MESSAGE = Target.the("welcome message").located((By.ID, "nameofuser"))
+    CART_BUTTON = Target.the("button to the cart").located_by((By.XPATH, "//a[normalize-space()='Cart']"))
