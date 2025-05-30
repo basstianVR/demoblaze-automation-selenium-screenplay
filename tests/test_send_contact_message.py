@@ -13,3 +13,5 @@ def test_send_contact_message():
         LogIn(user["username"],user["password"]),
         SendMessage(messageInfo["email"], messageInfo["name"], messageInfo["message"])
     )
+
+    Sebas.exit_stage_left()
