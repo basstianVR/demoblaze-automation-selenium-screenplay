@@ -1,6 +1,6 @@
 from actors.user import create_user
 from tasks.login import LogIn
-from tasks.send_messege import SendMessage
+from tasks.send_message import SendMessage
 from screenpy_selenium.questions import Text
 from pages.navbar import NavBar
 from screenpy import See
