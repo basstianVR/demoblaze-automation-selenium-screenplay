@@ -7,26 +7,26 @@ from tasks.go_to_cart import GoToCart
 from tasks.delete_item import DeleteItem
 from screenpy_selenium.questions import Text
 from screenpy_selenium.actions import Pause
+from data.products import ProductNames
+from data.users import TestUsers
 from pages.navbar import NavBar
 from pages.info_item_page import InfoItemPage
 from pages.cart_page import CartPage
 from screenpy import Eventually, See
 from screenpy.resolutions import ContainsTheText
 
-@pytest.mark.parametrize("product_name", [
-    "Samsung galaxy s6",
-    "Nokia lumia 1520"
-])
+@pytest.mark.parametrize("product_name", ProductNames.PRODUCT_PHONE_NAMES)
 
 def test_user_can_log_in(product_name):
     Sebas = create_user()
+    user = TestUsers.DARKAN
     
     Sebas.attempts_to(
-        LogIn("Darkan", "pwd1234")
+        LogIn(user["username"], user["password"])
     )
 
     Sebas.should(
-        See.the(Text.of(NavBar.WELCOME_MESSAGE), ContainsTheText("Welcome Darkan"))
+        See.the(Text.of(NavBar.WELCOME_MESSAGE), ContainsTheText(f"Welcome {user["username"]}"))
     )
 
     Sebas.attempts_to(
