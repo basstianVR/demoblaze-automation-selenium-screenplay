@@ -8,5 +8,6 @@ def create_user():
     
     service = Service(ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service)
+    driver.maximize_window()
 
     return Actor.named("Sebas").who_can(BrowseTheWeb.using(driver))
