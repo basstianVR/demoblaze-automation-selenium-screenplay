@@ -35,7 +35,10 @@ pytest tests/test_login.py
 ```
 
 ### ▶️ DEMO
-https://github.com/user-attachments/assets/a4c91700-cfb7-4fb4-afca-4104d8f6c4b3
+
+https://github.com/user-attachments/assets/a78c473f-b651-49d9-b529-39281a4ec5ea
+
+
 ---
 
 Feel free to clone, explore, or contribute!
